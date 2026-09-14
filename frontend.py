@@ -150,9 +150,8 @@ if st.button("Predict Price"):
 
 
     response = requests.post(
-        "https://laptop-price-prediction-model-2nuo.onrender.com",
-        json=laptop_data
-    )
+    "https://laptop-price-prediction-model-2nuo.onrender.com/predict",
+    json=laptop_data)
 
 
     if response.status_code == 200:
