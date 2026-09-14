@@ -7,9 +7,6 @@ st.title("💻 Laptop Price Predictor")
 st.write("Enter the laptop specifications to predict its price.")
 
 
-# -----------------------------
-# Laptop Information
-# -----------------------------
 
 company = st.selectbox(
     "Company",
@@ -70,9 +67,7 @@ ips = st.selectbox(
 )
 
 
-# -----------------------------
-# CPU
-# -----------------------------
+
 
 cpu_brand = st.selectbox(
     "CPU Brand",
@@ -87,9 +82,6 @@ cpu_speed = st.number_input(
 )
 
 
-# -----------------------------
-# Storage
-# -----------------------------
 
 ssd = st.number_input(
     "SSD (GB)",
@@ -158,7 +150,7 @@ if st.button("Predict Price"):
 
 
     response = requests.post(
-        "http://127.0.0.1:8000/predict",
+        "https://laptop-price-prediction-model-2nuo.onrender.com",
         json=laptop_data
     )
 
